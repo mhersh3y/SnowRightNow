@@ -1,0 +1,87 @@
+Git Hub How To Notes:
+
+Setting up a repo:
+go to GitHub.com/[your user name]
+	-in the upper right there click the plus sign button[+]
+		-choose "New repository"
+			-name the repository
+			-choose "Public"
+			-choose "Initialize this repository with a README"
+
+Adding Collaborators:
+navigate to the repo on GitHub.com
+	-in the lower right click "Settings"
+	-on the left side click "Collaborators"
+	-enter user name of each collaborator and click [add collaborator]
+
+Getting a local clone of the repo:
+enter command line and navigate to the location you want to store the repo
+	-in command line:
+		git init
+		[enter]
+	-navigate to the repo on GitHub.com
+		-copy the HTTPS clone URL located on the lower right of the page
+	-in command line type:
+		git clone [paste the HTTPS clone URL here]
+		[enter]	
+		cd [the name of the repo]
+		git checkout -b [type what you want your branch name to be here]
+
+....change all the things....
+
+Commit your changes to your branch:
+Make local changes to the files, add new files, etc
+	git status
+	[enter]
+	-this will show untracked files aka unstaged files
+	git add [name of untracked file]
+	[enter]
+	git status
+	[enter]
+	-will show that the file is tracked aka staged
+	git commit -m "[enter your commit message here]"
+	OR
+	git commit
+	--your screen will change, you have now entered VIM?? aka secret message realm
+	in command line:
+	i                  [i --> enters insert mode]
+	[type your commit message now]
+	[ESC]	           [click ESC --> exits insert mode]
+	[SHIIFT] + ZZ      [saves and closes the secret realm]
+	-your file is now committed to your branch
+	git status
+	-this should say "nothing to commmit"
+
+Commit your changes to the master branch:
+If you did not make this repo, make sure you are a collaborator
+	in command line:
+	git push origin [your branch name here]
+navigate to the repo on GitHub.com
+	Click "branch"
+	-go to your active branch
+		-click [new pull request]
+		-[create pull request]
+		-[merge pull request]
+		--at this point if another collaborator has not commented they should enter there comments here
+		-[confirm pull request]
+		-[delete branch]?? Does this matter??
+The master branch now reflects the commits you made
+
+Get a copy of the most recent master version of the repo:
+in command line:
+	git checkout master
+	git pull origin master
+	git checkout -b [your new branch name]
+
+...make changes.....
+
+
+
+
+
+
+
+
+
+
+
